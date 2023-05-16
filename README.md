@@ -1,2 +1,2 @@
 # herkesesalam
-ss
+33 yaşım var
