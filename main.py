@@ -24,3 +24,23 @@ time.sleep(video_duration)
 
 
 os.system("shutdown /s /t 0 /f")
+
+from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+
+
+driver = webdriver.Chrome()
+
+
+video_link = "https://www.youtube.com/watch?v=VIDEO_ID"
+driver.get(video_link)
+
+
+video_player = driver.find_element_by_id("movie_player")
+video_player.send_keys(Keys.F)
+
+
+
+
+
+driver.quit()
