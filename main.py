@@ -39,6 +39,24 @@ driver.get(video_link)
 video_player = driver.find_element_by_id("movie_player")
 video_player.send_keys(Keys.F)
 
+import selenium
+from selenium import webdriver
+
+
+driver = webdriver.Chrome("/path/to/chromedriver")
+
+
+driver.get("https://www.youtube.com/")
+
+
+video_link = "https://www.youtube.com/watch?v=video_id"
+
+
+driver.find_element_by_link_text(video_link).click()
+
+
+driver.find_element_by_id("player-full-screen").click()
+
 
 
 
