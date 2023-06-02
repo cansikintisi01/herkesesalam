@@ -16,4 +16,22 @@ webbrowser.get().wait_until_closed()
 webbrowser.get().close()
 
 
+import pyautogui
+import webbrowser
+
+# Youtube linki iste
+youtube_link = input("Link: ")
+
+# Youtube linkine git
+webbrowser.open(youtube_link)
+
+# Videoyu tam ekran yap
+pyautogui.hotkey("Alt", "Enter")
+
+# Videonun bitmesini bekle
+while pyautogui.locateCenterOnScreen("stop_button.png") is None:
+    pass
+
+# Tarayıcıyı kapat
+pyautogui.hotkey("Alt", "F4")
 
